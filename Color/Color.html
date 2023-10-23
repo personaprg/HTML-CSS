@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color</title>
+
+  <style>
+    #style-1{
+      color: blanchedalmond;
+      background-color: aqua;
+    }
+    /* <h1> id로 접근하여 스타일 적용</h1> */
+
+    .style-2{
+      color: aqua;
+      background-color: blanchedalmond;
+    }
+    /* <h1> class로 접근하여 스타일 적용 </h1> */
+
+    p{
+      color: blue;
+      background-color: red;
+    }
+    /* <p> tag로 접근하여 스타일 적용 </p> */
+
+    #root>:nth-child(4){
+      color: yellow;
+      background-color: green;
+    }
+    /* <h1> nth-child로 접근하여 스타일 적용 </h1> */
+
+  </style>
+
+  <link rel="stylesheet" href="style.css" />
+  <!-- <div>외부 css파일을 불러와 적용</div> -->
+</head>
+
+
+<body>
+  <!-- dir#root 작성으로 생성 -->
+  <div id="root">
+    <div id="style-1">
+      <h1> id로 접근하여 스타일 적용</h1>
+    </div>
+
+    <div class="style-2">
+      <h1> class로 접근하여 스타일 적용 </h1>
+    </div>
+
+    <p> tag로 접근하여 스타일 적용 </p>
+
+    <div>
+      <h1> nth-child로 접근하여 스타일 적용 </h1>
+    </div>
+
+    <div>
+      <div id="style-3">DOM으로 접근하여 스타일 적용</div>
+    </div>
+    <br>
+    <div>
+      <div id="style-4">외부 css파일을 불러와 적용</div>
+    </div>
+    <br>
+    <div style="background-color: palegreen; color: darkgrey;">
+      태그에서 스타일 적용
+    </div>
+  
+    <script>
+      let style = document.getElementById("style-3");
+      style.style.color = "green";
+      style.style.backgroundColor = "yellow";
+      // <div id="style-3">DOM으로 접근하여 스타일 적용</div>
+
+    </script>
+
+  </div>
+
+</body>
+
+</html>
