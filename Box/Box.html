@@ -6,13 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Box</title>
   <style>
-
-    *{
+    * {
       margin: 0;
       padding: 0;
     }
 
-    #root{
+    #root {
       display: flex;
       /* flex-direction: column; */
       justify-content: center;
@@ -20,7 +19,7 @@
       text-align: center;
     }
 
-    #Box1{
+    #Box1 {
       background-color: rgb(122, 29, 29);
       width: 50px;
       height: 50px;
@@ -31,7 +30,7 @@
       border-radius: 10px;
     }
 
-    #Box2{
+    #Box2 {
       background-color: rgba(122, 29, 29, 0.5);
       /* red, green, blue, alpha(투명도)  */
       width: 50px;
@@ -40,25 +39,22 @@
       border-radius: 50%;
     }
 
-    #Box3{
+    #Box3 {
       background-color: aqua;
       width: 10vw;
       height: 10vh;
       border-radius: 10%;
     }
 
-
-    #img{
+    #img {
       background-image: url("./pok.png");
       background-size: contain;
       width: 50px;
       height: 90px;
       border: 1px solid black;
     }
-
   </style>
 </head>
-
 
 <body>
   <div id="root">
@@ -67,28 +63,23 @@
     <div id="Box3">Box3</div>
 
     <div id="img"></div>
-
-    <img src="https://w7.pngwing.com/pngs/115/437/png-transparent-pokemon-heartgold-and-soulsilver-unown-pokedex-missingno-unown-number-question-pokemon-thumbnail.png" alt="사진 이미지" width="50px" height="90px">
-
+    <img
+      src="https://w7.pngwing.com/pngs/115/437/png-transparent-pokemon-heartgold-and-soulsilver-unown-pokedex-missingno-unown-number-question-pokemon-thumbnail.png"
+      alt="사진 이미지" width="50px" height="90px">
     <div id="dom">click</div>
-
-
   </div>
 
   <script>
     const dom = document.getElementById("dom");
 
-    
-    dom.addEventListener("click", ()=>{
+    dom.addEventListener("click", () => {
       const r = Math.floor((Math.random() * (255)));
       const g = Math.floor((Math.random() * (255)));
       const b = Math.floor((Math.random() * (255)));
-
       dom.style.backgroundColor = `rgb(${r.toString()}, ${g.toString()}, ${b.toString()})`;
       dom.style.width = `50px`
       dom.style.height = `50px`
     })
-
   </script>
 </body>
 
